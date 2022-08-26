@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 from typing import List
 
 
@@ -8,7 +8,7 @@ PROJECT_NAME="pressure-level-predictor"
 VERSION="0.0.3"
 AUTHOR="Lalita"
 DESCRIPTION="This is pressure level predictor ML project"
-PACKAGES=["airfoil"]
+
 REQUIREMENT_FILE_NAME="requirements.txt"
 
 
@@ -30,7 +30,7 @@ setup(
     version=VERSION,
     author=AUTHOR,
     description=DESCRIPTION,
-    packages=PACKAGES,
+    packages=find_packages(),
     install_requires=get_requirements_list()
     
 )
