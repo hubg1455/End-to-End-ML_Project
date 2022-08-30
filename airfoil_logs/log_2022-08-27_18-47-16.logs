@@ -1,6 +1,0 @@
-[2022-08-27 18:47:16,392]-werkzeug-WARNING- * Debugger is active!
-[2022-08-27 18:47:16,392]-werkzeug-INFO- * Debugger PIN: 370-090-466
-[2022-08-27 19:16:28,039]-root-INFO-Error occured in script:[E:\End-to-End-ML_Project\app.py] at line number: [17] error message:[testing exception]
-[2022-08-27 19:16:35,474]-root-INFO-Testing logging module
-[2022-08-27 19:16:35,478]-werkzeug-INFO-127.0.0.1 - - [27/Aug/2022 19:16:35] "GET / HTTP/1.1" 200 -
-[2022-08-27 19:16:35,923]-werkzeug-INFO-127.0.0.1 - - [27/Aug/2022 19:16:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
