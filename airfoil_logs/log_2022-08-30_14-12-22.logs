@@ -1,0 +1,5 @@
+[2022-08-30 14:13:14,612]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='e:\\End-to-End-ML_Project\\airfoil\\artifact')
+[2022-08-30 14:17:06,256]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='e:\\End-to-End-ML_Project\\airfoil\\artifact')
+[2022-08-30 14:17:28,345]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='e:\\End-to-End-ML_Project\\airfoil\\artifact')
+[2022-08-30 14:18:17,794]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='e:\\End-to-End-ML_Project\\airfoil\\artifact')
+[2022-08-30 14:39:29,601]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='e:\\End-to-End-ML_Project\\airfoil\\artifact')
