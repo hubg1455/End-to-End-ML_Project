@@ -1,0 +1,13 @@
+[2022-09-06 17:22:55,474]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='E:\\End-to-End-ML_Project\\airfoil\\artifact')
+[2022-09-06 17:22:55,474]-root-INFO-data ingestion config:DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz', tgz_download_dir='E:\\End-to-End-ML_Project\\airfoil\\artifact\\data_ingestion\\2022-09-06-17-22-53\\tgz_data', raw_data_dir='E:\\End-to-End-ML_Project\\airfoil\\artifact\\data_ingestion\\2022-09-06-17-22-53\\raw_data', ingested_train_dir='E:\\End-to-End-ML_Project\\airfoil\\artifact\\data_ingestion\\2022-09-06-17-22-53\\ingested_data\\train', ingested_test_dir='E:\\End-to-End-ML_Project\\airfoil\\artifact\\data_ingestion\\2022-09-06-17-22-53\\ingested_data\\test')
+[2022-09-06 17:22:55,489]-root-INFO-==================== Data ingestion log started.====================
+[2022-09-06 17:22:55,489]-root-INFO-downloading file from :[https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz] into [E:\End-to-End-ML_Project\airfoil\artifact\data_ingestion\2022-09-06-17-22-53\tgz_data\housing.tgz]
+[2022-09-06 17:22:56,691]-root-INFO-[E:\End-to-End-ML_Project\airfoil\artifact\data_ingestion\2022-09-06-17-22-53\tgz_data\housing.tgz] file has been download succesfully
+[2022-09-06 17:22:56,691]-root-INFO-Exracting file:[E:\End-to-End-ML_Project\airfoil\artifact\data_ingestion\2022-09-06-17-22-53\tgz_data\housing.tgz] into dir:[E:\End-to-End-ML_Project\airfoil\artifact\data_ingestion\2022-09-06-17-22-53\raw_data]
+[2022-09-06 17:22:56,803]-root-INFO-Exraction completed
+[2022-09-06 17:22:56,803]-root-INFO-Reading csv file:[E:\End-to-End-ML_Project\airfoil\artifact\data_ingestion\2022-09-06-17-22-53\raw_data\housing.csv]
+[2022-09-06 17:22:57,021]-root-INFO-Splitting data into train and test
+[2022-09-06 17:22:57,021]-root-ERROR-{e}
+[2022-09-06 17:22:57,025]-root-INFO-==================== Data Ingestion log completed.====================
+
+

@@ -13,6 +13,7 @@ import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
 
 
+
 class DataIngestion:
 
     def __init__(self,data_ingestion_config:DataIngestionConfig):
@@ -41,9 +42,10 @@ class DataIngestion:
             #complete file path name
             tgz_file_path=os.path.join(tgz_download_dir,airfoil_file_name)
 
-            logging.info(f"[{tgz_file_path}] file has been download succesfully")
+            logging.info(f"downloading file from :[{download_url}] into [{tgz_file_path}]")
             #now download the file from url
             urllib.request.urlretrieve(download_url,tgz_file_path)
+            logging.info(f"[{tgz_file_path}] file has been download succesfully")
 
             return tgz_file_path
 
@@ -62,7 +64,7 @@ class DataIngestion:
 
             logging.info(f"Exracting file:[{tgz_file_path}] into dir:[{raw_data_dir}]")
             with tarfile.open(tgz_file_path) as airfoil_file_obj:
-
+                
                 airfoil_file_obj.extractall(path=raw_data_dir)
 
             logging.info(f"Exraction completed")
@@ -78,7 +80,16 @@ class DataIngestion:
             airfoil_file_path=os.path.join(raw_data_dir,file_name)
 
             logging.info(f"Reading csv file:[{airfoil_file_path}]")
+            
             airfoil_data_frame=pd.read_csv(airfoil_file_path)
+
+            airfoil_data_frame["income_cat"]=pd.cut(
+                        airfoil_data_frame["median_income"],
+                        bins=[0.0,1.5,3.0,4.5,6.0,np.inf],
+                        labels=[1,2,3,4,5]
+            )
+
+            
 
             logging.info(f"Splitting data into train and test")
             strat_train_set=None
@@ -86,7 +97,9 @@ class DataIngestion:
 
             split=StratifiedShuffleSplit(n_splits=1,test_size=0.2,random_state=42)
 
-            for train_index,test_index in split.split(airfoil_data_frame):
+            for train_index,test_index in split.split(airfoil_data_frame,airfoil_data_frame["income_cat"]):
+                strat_train_set=airfoil_data_frame.loc[train_index].drop(["income_cat"],axis=1)
+                strat_test_set=airfoil_data_frame.loc[test_index].drop(["income_cat"],axis=1)
 
 
             #save the data
@@ -119,9 +132,10 @@ class DataIngestion:
         except Exception as e:
             raise AirfoilException(e,sys) from e
 
+    # to call all above 3 functions
     def initiate_data_ingestion(self)->DataIngestionArtifact:
         try:
-            tgz_file_path=self.download_airfoil_data
+            tgz_file_path=self.download_airfoil_data()
             self.extract_airfoil_data(tgz_file_path=tgz_file_path)
 
             return self.split_data_as_train_test()
@@ -129,5 +143,5 @@ class DataIngestion:
         except Exception as e:
             raise AirfoilException(e,sys) from e
 
-    def __del__(self:):
+    def __del__(self):
         logging.info(f"{'='*20} Data Ingestion log completed.{'='*20}\n\n")
