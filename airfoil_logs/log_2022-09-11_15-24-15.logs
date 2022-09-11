@@ -1,0 +1,15 @@
+[2022-09-11 15:24:27,788]-root-INFO-Training pipeline config :TrainingPipelineConfig(artifact_dir='E:\\End-to-End-ML_Project\\price_prediction\\artifact')
+[2022-09-11 15:24:27,788]-root-INFO-data ingestion config:DataIngestionConfig(dataset_download_url='https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz', tgz_download_dir='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\tgz_data', raw_data_dir='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\raw_data', ingested_train_dir='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\ingested_data\\train', ingested_test_dir='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\ingested_data\\test')
+[2022-09-11 15:24:27,788]-root-INFO-==================== Data ingestion log started.====================
+[2022-09-11 15:24:27,794]-root-INFO-downloading file from :[https://raw.githubusercontent.com/ageron/handson-ml/master/datasets/housing/housing.tgz] into [E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\tgz_data\housing.tgz]
+[2022-09-11 15:24:29,598]-root-INFO-[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\tgz_data\housing.tgz] file has been download succesfully
+[2022-09-11 15:24:29,599]-root-INFO-Exracting file:[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\tgz_data\housing.tgz] into dir:[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\raw_data]
+[2022-09-11 15:24:29,626]-root-INFO-Exraction completed
+[2022-09-11 15:24:29,626]-root-INFO-Reading csv file:[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\raw_data\housing.csv]
+[2022-09-11 15:24:29,829]-root-INFO-Splitting data into train and test
+[2022-09-11 15:24:29,884]-root-INFO-Exporting training dataset to file:[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\ingested_data\train\housing.csv]
+[2022-09-11 15:24:30,074]-root-INFO-Exporting test dataset to file:[E:\End-to-End-ML_Project\price_prediction\artifact\data_ingestion\2022-09-11-15-24-15\ingested_data\test\housing.csv]
+[2022-09-11 15:24:30,125]-root-INFO-Data ingestion artifact:[DataIngestionArtifact(train_file_path='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\ingested_data\\train\\housing.csv', test_file_path='E:\\End-to-End-ML_Project\\price_prediction\\artifact\\data_ingestion\\2022-09-11-15-24-15\\ingested_data\\test\\housing.csv', is_ingested=True, message='Data ingestion has been completed')]
+[2022-09-11 15:24:30,126]-root-INFO-==================== Data Ingestion log completed.====================
+
+

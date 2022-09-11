@@ -1,21 +1,21 @@
-from airfoil.config.configuration import Airfoil_Configuration
-from airfoil.logger import logging
-from airfoil.exception import AirfoilException
+from price_prediction.config.configuration import Price_Configuration
+from price_prediction.logger import logging
+from price_prediction.exception import PriceException
 
-from airfoil.entity.artifact_entity import DataIngestionArtifact
-from airfoil.entity.config_entity import DataIngestionConfig
-from airfoil.component.data_ingestion import DataIngestion
+from price_prediction.entity.artifact_entity import DataIngestionArtifact
+from price_prediction.entity.config_entity import DataIngestionConfig
+from price_prediction.component.data_ingestion import DataIngestion
 import os,sys
 
 
 class Pipeline:
 
-    def __init__(self,config:Airfoil_Configuration=Airfoil_Configuration())->None:
+    def __init__(self,config:Price_Configuration=Price_Configuration())->None:
         try:
             self.config=config
         
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e
 
     def start_data_ingestion(self)->DataIngestionArtifact:
         try:
@@ -24,7 +24,7 @@ class Pipeline:
             return data_ingestion.initiate_data_ingestion()
         
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e
 
 
     def start_data_validation(self):
@@ -50,4 +50,4 @@ class Pipeline:
             data_ingestion_artifact=self.start_data_ingestion()
         
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e

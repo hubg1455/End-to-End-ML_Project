@@ -1,7 +1,7 @@
 import logging
 import sys
-from airfoil.pipeline.pipeline import Pipeline
-from airfoil.exception import AirfoilException
+from price_prediction.pipeline.pipeline import Pipeline
+from price_prediction.exception import PriceException
 
 def main():
 

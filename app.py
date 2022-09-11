@@ -1,8 +1,10 @@
 
 from flask import Flask
-from airfoil.logger import logging
-from airfoil.exception import AirfoilException
+from price_prediction.logger import logging
+from price_prediction.exception import PriceException
 import sys
+
+from price_prediction.exception import PriceException
 
 app=Flask(__name__)
 
@@ -14,8 +16,8 @@ def index():
         raise Exception("testing exception")
 
     except Exception as e:
-        airfoil=AirfoilException(e,sys)
-        logging.info(airfoil.error_message)
+        price=PriceException(e,sys)
+        logging.info(price.error_message)
         logging.info("Testing logging module")
     return "Starting Machine Learning Project"
 

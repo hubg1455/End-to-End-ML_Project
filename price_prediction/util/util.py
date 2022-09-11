@@ -1,5 +1,5 @@
 import yaml
-from airfoil.exception import AirfoilException
+from price_prediction.exception import PriceException
 import os,sys
 
 
@@ -13,4 +13,4 @@ def read_yaml_file(file_path:str)->dict:
             return yaml.safe_load(yaml_file)
 
     except Exception as e:
-        raise AirfoilException(e,sys) from e
+        raise PriceException(e,sys) from e

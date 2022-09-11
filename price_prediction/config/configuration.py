@@ -1,16 +1,16 @@
 from ast import Str
-from airfoil.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig, ModelEvaluationConfig, ModelPusherConfig, \
+from price_prediction.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTransformationConfig, ModelEvaluationConfig, ModelPusherConfig, \
     ModelTrainerConfig, TrainingPipelineConfig 
-from airfoil.util.util import read_yaml_file
-from airfoil.logger import logging
+from price_prediction.util.util import read_yaml_file
+from price_prediction.logger import logging
 import os,sys
-from airfoil.exception import AirfoilException
-from airfoil.constant import *
+from price_prediction.exception import PriceException
+from price_prediction.constant import *
 
 
 
 
-class Airfoil_Configuration:
+class Price_Configuration:
 
     def __init__(self,
         config_file_path:str =CONFIG_FILE_PATH,
@@ -23,7 +23,7 @@ class Airfoil_Configuration:
             self.time_stamp= current_time_stamp
 
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e
 
     # for read the information
     def get_training_pipeline_config(self) -> TrainingPipelineConfig:
@@ -37,7 +37,7 @@ class Airfoil_Configuration:
             return training_pipeline_config
 
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e
 
 
     def get_data_ingestion_config(self) ->DataIngestionConfig:
@@ -84,10 +84,21 @@ class Airfoil_Configuration:
             return data_ingestion_config
 
         except Exception as e:
-            raise AirfoilException(e,sys) from e
+            raise PriceException(e,sys) from e
 
     def get_data_validation_config(self)-> DataValidationConfig:
-        pass
+        try:
+
+            schema_file_path=None
+            data_validation_config=DataValidationConfig(
+                schema_file_path=schema_file_path
+
+            )
+
+            return data_validation_config
+
+        except Exception as e:
+            raise PriceException(e,sys) from e
 
     def get_data_transformation_config(self)->DataTransformationConfig:
         pass

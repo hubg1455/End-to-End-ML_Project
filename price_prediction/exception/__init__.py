@@ -3,12 +3,12 @@ import os
 import sys
 from tracemalloc import Statistic
 
-class AirfoilException(Exception):
+class PriceException(Exception):
     
     def __init__(self, error_message:Exception,error_detail:sys):
         super().__init__(error_message)
 
-        self.error_message=AirfoilException.get_detailed_error_message(error_message=error_message,
+        self.error_message=PriceException.get_detailed_error_message(error_message=error_message,
                                                                     error_detail=error_detail)
 
     @staticmethod
@@ -40,4 +40,4 @@ class AirfoilException(Exception):
         return self.error_message
 
     def __repr__(self) -> str:
-        return AirfoilException.__name__.str()
+        return PriceException.__name__.str()
