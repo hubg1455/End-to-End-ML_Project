@@ -2,3 +2,6 @@
  * Running on http://127.0.0.1:5000
 [2022-09-11 15:22:19,853]-werkzeug-INFO-[33mPress CTRL+C to quit[0m
 [2022-09-11 15:22:19,856]-werkzeug-INFO- * Restarting with stat
+[2022-09-11 15:24:00,180]-werkzeug-INFO- * Restarting with stat
+[2022-09-11 15:24:05,756]-werkzeug-INFO- * Restarting with stat
+[2022-09-11 15:24:10,070]-werkzeug-INFO- * Restarting with stat
