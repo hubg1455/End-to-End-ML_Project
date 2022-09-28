@@ -25,7 +25,7 @@ class DataIngestion:
             raise PriceException(e,sys) from e
 
     
-    def download_airfoil_data(self)->str:
+    def download_price_data(self)->str:
         try:
             #extract remote url to download dataset
             download_url=self.data_ingestion_config.dataset_download_url
@@ -135,7 +135,7 @@ class DataIngestion:
     # to call all above 3 functions
     def initiate_data_ingestion(self)->DataIngestionArtifact:
         try:
-            tgz_file_path=self.download_airfoil_data()
+            tgz_file_path=self.download_price_data()
             self.extract_price_data(tgz_file_path=tgz_file_path)
 
             return self.split_data_as_train_test()

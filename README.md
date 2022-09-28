@@ -88,3 +88,7 @@ pip install ipykernel
 '''
 pip install pyYAML
 '''
+
+'''
+when dataset stats gets change is called data drift
+'''
