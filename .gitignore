@@ -68,7 +68,7 @@ instance/
 
 # Scrapy stuff:
 .scrapy
-airfoil/artifact
+price_prediction/artifact
 # Sphinx documentation
 docs/_build/
 
